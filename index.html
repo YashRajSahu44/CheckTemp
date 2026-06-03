@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aether — Weather</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background layers -->
+  <div class="bg" id="bg"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <!-- Particle effects -->
+  <div class="stars" id="stars"></div>
+  <div class="rain-container" id="rain"></div>
+  <div class="snow-container" id="snow"></div>
+
+  <!-- App -->
+  <div class="app">
+
+    <!-- Search -->
+    <div class="search-wrap">
+      <input class="search-input" id="cityInput" type="text" placeholder="Search city…" value="London" />
+      <button class="search-btn" onclick="fetchWeather()">Search</button>
+    </div>
+
+    <!-- Card -->
+    <div class="card" id="card">
+      <button class="unit-toggle" id="unitToggle" onclick="toggleUnit()">°F</button>
+
+      <!-- Loader / error -->
+      <div class="status-msg" id="statusMsg">
+        <div class="loader"></div>
+        Loading weather…
+      </div>
+
+      <!-- Weather content (hidden until data loads) -->
+      <div id="weatherContent" style="display:none"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
